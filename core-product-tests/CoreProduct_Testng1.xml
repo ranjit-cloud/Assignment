@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Core Product Test">
+    <listeners>
+        <listener class-name="org.automationframework.listeners.Listeners"/>
+    </listeners>
+    <test name="CP Test2">
+        <classes>
+            <class name="org.coreProduct.runners.TestRunner2"/>
+        </classes>
+    </test>
+</suite>

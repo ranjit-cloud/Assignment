@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Derived Product 2 Test">
+    <listeners>
+        <listener class-name="org.automationframework.listeners.Listeners"/>
+    </listeners>
+    <test name="TC4">
+        <classes>
+            <class name="org.derivedProduct2.runners.TestRunner"/>
+        </classes>
+    </test>
+</suite>
