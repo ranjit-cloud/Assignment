@@ -5,7 +5,7 @@
     </listeners>
     <test name="CP Test2">
         <classes>
-            <class name="org.coreProduct.runners.TestRunner2"/>
+           <class name="org.coreProduct.runners.TestRunner2"/>
         </classes>
     </test>
 </suite>

@@ -1,11 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name="Core Product Test">
+<!--    <parameter name="cucumber.filter.tags" value="@TC1"/>-->
     <listeners>
         <listener class-name="org.automationframework.listeners.Listeners"/>
     </listeners>
-    <test name="CP Test1">
+    <test name="CP Test1" parallel="classes">
+      <parameter name="cucumber.filter.tags" value="@TC"/>
         <classes>
             <class name="org.coreProduct.runners.TestRunner1"/>
+            <class name="org.coreProduct.runners.TestRunner2"/>
         </classes>
     </test>
 </suite>

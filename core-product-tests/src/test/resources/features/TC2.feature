@@ -1,6 +1,6 @@
 Feature: core product flow2
 
-  @TC2
+  @TC2 @TC
   Scenario: To verify core product execution flow2
     Given User lands on home page
     Then hover on menu icon

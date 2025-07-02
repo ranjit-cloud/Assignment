@@ -63,7 +63,8 @@ public class CoreProductHomeStepDefinition {
 
         try {
             String output = new String(Files.readAllBytes(Paths.get("Output.txt")));
-            test.info(MarkupHelper.createLabel("Output.txt content:", ExtentColor.BLUE));
+            test.info(MarkupHelper.createCodeBlock(output));
+           // test.info(MarkupHelper.createLabel("Output.txt content:", ExtentColor.BLUE));
         } catch (IOException e) {
             test.warning("Could not attach Output.txt: " + e.getMessage());
         }

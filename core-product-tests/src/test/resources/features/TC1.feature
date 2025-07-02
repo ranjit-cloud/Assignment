@@ -1,5 +1,5 @@
 Feature: core product flow1
-  @TC1
+  @TC1 @TC
   Scenario: To verify core product execution flow1
     Given User lands on core product home page
     Then Scroll to shop menu

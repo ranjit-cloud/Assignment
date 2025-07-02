@@ -49,7 +49,7 @@ public class DP2HomePage extends BaseTest {
     public void insertData() throws IOException {
         FileWriter writer = new FileWriter("Out.csv");
         for (WebElement element1 : webElements) {
-            System.out.println(element1.getDomAttribute("href"));
+            logger.info("Link: {}", element1.getDomAttribute("href"));
             String href = element1.getDomAttribute("href");
             String linkText = element1.getText();
             if (href != null) {

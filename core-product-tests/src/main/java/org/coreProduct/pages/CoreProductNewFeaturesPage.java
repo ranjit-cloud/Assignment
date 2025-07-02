@@ -38,8 +38,10 @@ public class CoreProductNewFeaturesPage extends BaseTest {
         int count1 = 0;
         for (WebElement t : time) {
             if (t.isDisplayed())
-                if (Integer.parseInt(t.getText().split("d")[0]) >= 3)
-                    count1++;
+                if (t.getText().contains("d")) {
+                    if (Integer.parseInt(t.getText().split("d")[0]) >= 3)
+                        count1++;
+                }
         }
         return count1;
     }

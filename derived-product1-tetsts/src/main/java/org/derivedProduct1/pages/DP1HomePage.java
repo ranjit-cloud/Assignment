@@ -63,7 +63,7 @@ public class DP1HomePage extends BaseTest {
         for (int i = 0; i < slides.size(); i++) {
             currentActive = activeSlideDetail.getDomAttribute("aria-label");
             Instant startTime = Instant.now();
-            TestUtility.explicitWait(15).until(ExpectedConditions.domAttributeToBe(getActiveSlide(), "aria-selected", "false"));
+            TestUtility.explicitWait(30).until(ExpectedConditions.domAttributeToBe(getActiveSlide(), "aria-selected", "false"));
             Instant endTime = Instant.now();
             Duration duration = Duration.between(startTime, endTime);
             logger.info("Duration of slide: {} is: {}", currentActive, duration.getSeconds());

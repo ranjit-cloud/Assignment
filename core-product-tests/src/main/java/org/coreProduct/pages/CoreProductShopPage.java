@@ -38,8 +38,14 @@ public class CoreProductShopPage extends BaseTest {
         String parentWindow = itr.next();
         String childWindow = itr.next();
         driver.switchTo().window(childWindow);
-        System.out.println(driver.getTitle());
+        logger.info("Title is: {}", driver.getTitle());
         Thread.sleep(5000);
+//        WebElement element =driver.findElement(By.xpath("//i[@aria-label='Close Pop-Up']"));
+//        if(element.isDisplayed())
+//        {
+//            element.click();
+//        }
+        driver.navigate().refresh();
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", jackets);
         jackets.click();
     }
@@ -47,11 +53,11 @@ public class CoreProductShopPage extends BaseTest {
     public void storeDetailsToFile() throws IOException {
         FileWriter writer = new FileWriter("Output.txt");
         String lineSeparator = System.getProperty("line.separator");
-        System.out.println("Line separator: " + lineSeparator);
+        logger.info("Line separator: {}", lineSeparator);
         do {
             logger.info("Next page aria-disabled: {}", nextPage.getDomAttribute("aria-disabled"));
             List<WebElement> products = BaseTest.getDriver().findElements(By.className("product-card"));
-            System.out.println("product size " + products.size());
+            logger.info("product size : {} ", products.size());
             for (WebElement product : products) {
                 logger.info(product.findElement(By.className("product-card-title")).getText());
                 logger.info(product.findElement(By.className("lowest")).getText());
